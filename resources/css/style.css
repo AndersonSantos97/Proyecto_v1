@@ -1,0 +1,24 @@
+body{
+    align-items: center !important;
+    background-color: #c6e1ed;
+    
+}
+.main-container{
+background-color: #ffffff;
+align-items: center !important;
+display: flex;
+width: 90% !important;
+padding: 2.5%;
+margin: 5%;
+border-radius: 15px;
+/* border:.5px solid #000; */
+box-shadow: 1px 1px 2px #030303;
+
+}
+h1{
+    text-align: center;
+}
+#btn{
+    display: flex;
+
+}
