@@ -10,12 +10,15 @@
 
     <title>Registro Paciente</title>
     <style>
+        
         /* Personalización para los radio buttons */
         .custom-radio-group input[type="radio"]:checked+label:after {
           border: 2px solid #2196F3;
+
         }
         .custom-radio-group input[type="radio"]:checked+label:before {
           background-color: #2196F3;
+
         }
       </style>
     
