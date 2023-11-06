@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('paciente', function (Blueprint $table) {
             $table->id();
-            $table->int('dni',15);
-            $table ->string('primer_nombre',25);
+            $table->string('dni',15);
+            $table->string('primer_nombre',25);
             $table->string('segundo_nombre',25);
             $table->string('primer apellido',25);
             $table->string('segundo_apellido',25);
