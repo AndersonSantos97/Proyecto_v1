@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('medico', function (Blueprint $table) {
             $table->id();
-            $table->string('dni',15);
+            $table->integer('dni');
             $table->string('primer_nombre',25);
             $table->string('segundo_nombre',25);
             $table->string('primer apellido',25);
