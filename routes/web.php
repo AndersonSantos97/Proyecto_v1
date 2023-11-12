@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MedicEntityController;
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\SignupController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserController;
@@ -17,8 +21,13 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [MainController::class, 'index']);
 
+Route::get('/login', [LoginController::class, 'login'])->name('users.login');
 
-Route::get('/users', [UserController::class, 'login']);
+Route::get('/signup', [SignupController::class, 'signup'])->name('users.signup');
+
+Route::get('/patient', [PatientController::class,'patient']);
+
+Route::get('/medicEntity', [MedicEntityController::class,'medicEntity']);
 
 
 Route::get('users/registrarse','UserController@registrarse') ->name('users.singup');

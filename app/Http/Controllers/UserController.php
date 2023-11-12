@@ -13,29 +13,29 @@ class UserController extends Controller
         return view('users.login');
     }
 
-    public function registrarse(){
-        return view('users.singup');
-    }
+    // public function registrarse(){
+    //     return view('users.singup');
+    // }
 
-    public function create(){
-        //
-    }
+    // public function create(){
+    //     //
+    // }
 
-    public function show($user){
-        return "This is the user with id {$user} from CONTROLLER";
-    }
+    // public function show($user){
+    //     return "This is the user with id {$user} from CONTROLLER";
+    // }
 
-    public function edit($user){
-        return "Now you can edit the user with id {$user} from CONTROLLER";
-    }
+    // public function edit($user){
+    //     return "Now you can edit the user with id {$user} from CONTROLLER";
+    // }
 
-    public function update(Request $request, $user){
-        //
-    }
+    // public function update(Request $request, $user){
+    //     //
+    // }
 
-    public function destroy($user){
-        //
-    }
+    // public function destroy($user){
+    //     //
+    // }
 
 
 

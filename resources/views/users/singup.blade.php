@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+@extends('layout.layout')
 
-    <title>Registro Paciente</title>
+@section('title','Regisatro del paciente')
+
+@section('content')
     <style>
         
         /* Personalización para los radio buttons */
@@ -20,10 +14,8 @@
           background-color: #2196F3;
 
         }
-      </style>
-    
-</head>
-<body>
+    </style>
+
     <div class="container">
         <div class="row main-container">
           <div class="col s12 m12 ">
@@ -155,5 +147,4 @@
       </div>
       
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-</html>
+@endsection
