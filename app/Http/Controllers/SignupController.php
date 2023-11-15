@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 
 class SignupController extends Controller
 {
-    public function signup(Request $request){
-        return view("users.singup");
+    public function signup(){
+        return view("users.signup");
+    }
+
+    public function create(request $request){
+        //return $request->all();
+        
     }
 }

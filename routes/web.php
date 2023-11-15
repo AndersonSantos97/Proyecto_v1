@@ -25,6 +25,10 @@ Route::get('/login', [LoginController::class, 'login'])->name('users.login');
 
 Route::get('/signup', [SignupController::class, 'signup'])->name('users.signup');
 
+Route::post('/signup', [SignupController::class,'create'])->name('signup.create');
+
+
+
 Route::get('/patient', [PatientController::class,'patient']);
 
 Route::get('/medicEntity', [MedicEntityController::class,'medicEntity']);

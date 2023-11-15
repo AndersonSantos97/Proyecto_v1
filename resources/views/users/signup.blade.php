@@ -23,7 +23,9 @@
               <div class="card-content">
                 <span class="card-title">Registro de Paciente</span>
                 <div class="row">
-                  <form class="col s12" id="registrationForm">
+
+                  <form action="{{ route('signup.create') }}" method="POST" class="col s12" id="registrationForm">
+                    @csrf
                     <div class="row">
                       <div class="input-field col s12">
                         <input id="nombreCompleto" type="text" class="validate" required>
