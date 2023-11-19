@@ -14,19 +14,18 @@ return new class extends Migration
         Schema::create('paciente', function (Blueprint $table) {
             $table->id();
             //$table->('id')->unsigned();
-            $table->integer('dni');
+            $table->bigInteger('dni');
             $table->string('primer_nombre',25);
             $table->string('segundo_nombre',25);
-            $table->string('primer apellido',25);
+            $table->string('primer_apellido',25);
             $table->string('segundo_apellido',25);
             $table->string('direccion',50);
             $table->date('fecha_nacimiento');
             $table->string('estad_civil',2);
             $table->string('sexo',2);
-            $table->string('email',15);
+            $table->string('email',30);
             $table->string('telefono',10);
-            $table->string('usuario',10);
-            $table->string('contraseña',10);
+            $table->string('password');
             $table->date('fecha_registro');
             $table->timestamps();
         });

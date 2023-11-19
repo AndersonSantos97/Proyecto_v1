@@ -19,13 +19,13 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', [MainController::class, 'index']);
+Route::get('/', [MainController::class, 'index'])->name('home');
 
 Route::get('/login', [LoginController::class, 'login'])->name('users.login');
 
 Route::get('/signup', [SignupController::class, 'signup'])->name('users.signup');
 
-Route::post('/signup', [SignupController::class,'create'])->name('signup.create');
+Route::post('/signup', [PatientController::class,'store'])->name('users.store');
 
 
 

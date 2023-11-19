@@ -24,24 +24,29 @@
                 <span class="card-title">Registro de Paciente</span>
                 <div class="row">
 
-                  <form action="{{ route('signup.create') }}" method="POST" class="col s12" id="registrationForm">
+                  <form action="{{ route('users.store') }}" method="POST" class="col s12" id="registrationForm">
                     @csrf
+                    <!--Datos a llenar -->
                     <div class="row">
+                      <!--Nombre -->
                       <div class="input-field col s12">
-                        <input id="nombreCompleto" type="text" class="validate" required>
+                        <input name="txtname" id="nombreCompleto" type="text" class="validate" required>
                         <label for="nombreCompleto">Nombre Completo</label>
                       </div>
                       
+                      <!--DNI -->
                       <div class="input-field col s12">
-                        <input id="numeroIdentidad" type="text" class="validate" required>
+                        <input name="txtdni" id="numeroIdentidad" type="text" class="validate" required>
                         <label for="numeroIdentidad">Número de Identidad</label>
                       </div>
+
+                      <!--telefono -->
                       <div class="input-field col s12">
-                        <input id="numeroTelefono" type="tel" class="validate" required>
+                        <input name="txtcel" id="numeroTelefono" type="tel" class="validate" required>
                         <label for="numeroTelefono">Número de Teléfono</label>
                       </div>
-                       <!--Estado Civil, genero, tipo de sangre-->
-                       <div class="input-field col s6">
+                      <!--Estado Civil-->
+                      <div class="input-field col s6">
                         <fieldset class="custom-radio-group">
                           <legend>Estado Civil</legend>
                           <p>
@@ -58,6 +63,8 @@
                           </p>
                         </fieldset>
                       </div>
+
+                      <!--Genero-->
                       <div class="input-field col s6">
                         <fieldset class="custom-radio-group">
                           <legend>Género</legend>
@@ -76,9 +83,12 @@
                         </fieldset>
                       </div>
                     </div>
-                       <div class="input-field col s12 m12"><br>
+
+                    <!--Tipo de Sangre-->
+                    <div class="input-field col s12 m12">
+                      <br>
                         <label for="tipoSangre">Tipo de Sangre</label><br>
-                        <select id="tipoSangre" class="browser-default" required>
+                        <select name="optypeblood" id="tipoSangre" class="browser-default" required>
                           <option value="" disabled selected>Selecciona el Tipo de Sangre</option>
                           <option value="A+">A+</option>
                           <option value="A-">A-</option>
@@ -90,30 +100,40 @@
                           <option value="O-">O-</option>
                           <option value="N/A">No se</option>
                         </select>
-                      </div>
-                      <!---->
-                      <div class="input-field col s12">
-                        <input id="email" type="email" class="validate" required>
+                    </div>
+
+                      <!--email-->
+                    <div class="input-field col s12">
+                        <input name="txtemail" id="email" type="email" class="validate" required>
                         <label for="email">Correo Electrónico</label>
-                      </div>
-                      <div class="input-field col s12">
-                        <input id="password" type="password" class="validate" required>
+                    </div>
+
+                    <!--contraseña-->
+                    <div class="input-field col s12">
+                        <input name="txtpassword" id="password" type="password" class="validate" required>
                         <label for="password">Contraseña</label>
-                      </div>
-                      <div class="input-field col s12">
-                        <input id="confirmPassword" type="password" class="validate" required>
+                    </div>
+
+                    <!--confirmar contra-->
+                    <div class="input-field col s12">
+                        <input name="txtconfirmpass" id="confirmPassword" type="password" class="validate" required>
                         <label for="confirmPassword">Confirmación de Contraseña</label>
-                      </div>
-                      <div class="input-field col s12">
-                        <input id="contactoEmergencia" type="text" class="validate" required>
+                    </div>
+
+                    <!--contacto-->
+                    <div class="input-field col s12">
+                        <input name="txtcontact" id="contactoEmergencia" type="text" class="validate" required>
                         <label for="contactoEmergencia">En caso de emergencia, llamar a</label>
-                      </div>
-                      <div class="input-field col s12">
-                        <input id="telefonoEmergencia" type="tel" class="validate" required>
+                    </div>
+
+                    <!--telefono contacto-->
+                    <div class="input-field col s12">
+                        <input name="txtcelcontact" id="telefonoEmergencia" type="tel" class="validate" required>
                         <label for="telefonoEmergencia">Teléfono de Contacto</label>
-                      </div>
-                       
-                      <div class="file-field input-field col s12">
+                    </div>
+
+                    
+                    <div class="file-field input-field col s12">
                         <div class="btn">
                           <span>Subir DNI</span>
                           <input type="file" accept="image/*" multiple>
@@ -132,7 +152,7 @@
                         </div>
                       </div>
                     </div>
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+                    <button class="btn waves-effect waves-light" type="submit" name="btnregister">Registrar
                       
                     </button>
                     <button class="btn waves-effect waves-light" type="submit" name="action">Cancelar

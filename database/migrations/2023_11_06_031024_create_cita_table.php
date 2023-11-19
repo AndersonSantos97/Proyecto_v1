@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('paciente_id');
             $table->string('paciente_dni');
-            $table->string('medico_id');
+            $table->unsignedBigInteger('medico_id');
+            $table->foreign('medico_id')->references('id')->on('medico');
             $table->date('fecha_concertada');
             $table->time('hora_concertada');
             $table->string('examenes_previos');
