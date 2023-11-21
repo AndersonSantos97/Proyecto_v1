@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegisterRequest;
 use App\Models\Paciente;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PatientController extends Controller
@@ -37,17 +39,40 @@ class PatientController extends Controller
         $patient->sexo = "m";
         $patient->dni = $request->txtdni;
         $patient->telefono = $request->txtcel;
-        //$patient->typoblood = $request->optypeblood;
         $patient->email = $request->txtemail;
         $patient->password = $psswd;
         $patient->fecha_registro = date("Y-m-d");
-        $patient->save();
-        return redirect()->route('home');
+
+        $datos = array(
+            'name'=> $request->txtname,
+            'email'=> $request->txtemail,
+            'password'=> $psswd
+        );
+
+        $result = self::user($datos);
+        if ($result) {
+            $patient->save();
+            return redirect()->route('users.showed');
+        }else{
+            return redirect()->route('users.signup')->withErrors('auth.failed');
+        }
+        
+    }
+
+    public function user($args){
+        $user = new User();
+
+        $user->name = $args['name'];
+        $user->email = $args['email'];
+        $user->password = $args['password'];
+        $user->rol = 'p';
+
+        $result = $user->save();
+        return $result;
     }
 
     public function search($id){
-
-
+        
     }
 
 }

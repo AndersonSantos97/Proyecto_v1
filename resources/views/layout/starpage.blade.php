@@ -11,17 +11,22 @@
 
     <nav class="blue lighten-3">
     <div class="nav-wrapper">
-      
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a  href="index.html">Inicio</a></li>
-        <li><a  href="Ayuda.html">Ayuda</a></li>
+        <li><a  href="Ayuda.blade.php">Inicio</a></li>
+        <li><a  href="{{  ('ayuda')}}">Ayuda</a></li>
         <li><a  href="Acercade.html">Conocenos</a></li>
         <li><a  href="{{ route('users.login') }}">Ingresar</a></li>
         <li><a  href="{{ route('users.signup') }}">Registrarse</a></li>
-
-      </ul>
-     
+        @auth
+          <li>
+            <a href="{{ route('users.logout')}}">Salir</a>
+          </li>
+          <li>{{auth()->user()->name}}</li>  
+          <li>
+              {{auth()->user()->rol}}
+          </li>
+        @endauth
     </div>
   </nav>
         

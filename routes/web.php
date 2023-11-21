@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AyudaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\MedicEntityController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\SignupController;
@@ -21,27 +23,16 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [MainController::class, 'index'])->name('home');
 
-Route::get('/login', [LoginController::class, 'login'])->name('users.login');
+Route::get('/login', [LoginController::class, 'showed'])->name('users.showed');//ya
+Route::post('/login', [LoginController::class,'login'])->name('users.login');
 
 Route::get('/signup', [SignupController::class, 'signup'])->name('users.signup');
 
-Route::post('/signup', [PatientController::class,'store'])->name('users.store');
 
+Route::post('/signup', [PatientController::class,'store'])->name('users.store');//ya
+Route::get('/logout',[LogoutController::class,'logout'])->name('users.logout');
 
-
-Route::get('/patient', [PatientController::class,'patient']);
-
-Route::get('/medicEntity', [MedicEntityController::class,'medicEntity']);
-
-
-Route::get('users/registrarse','UserController@registrarse') ->name('users.singup');
-
-Route::post('users', 'UserController@create')->name('users.create');
-
-Route::get('users/{user}', 'UserController@show')->name('users.show');
-
-Route::get('users/{user}/edit','UserController@edit')->name('users.edit');
-
-Route::match(['put','patch'],'users/{user}', 'UserController@update')->name('users.update');
-
-Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy');
+// Route::get('/signup2', [SignupController::class, 'signupv2'])->name('users.signup2');
+// Route::post('/signup2', [SignupController::class, 'storeUser'])->name('users.store2');
+Route::get('/ayuda',[AyudaController::class,'show'])->name('ayuda');
+//Route::get('/menupaciente', [MenuController::class,''])->name('menupaciente');

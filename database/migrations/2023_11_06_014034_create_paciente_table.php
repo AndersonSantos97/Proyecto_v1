@@ -23,7 +23,7 @@ return new class extends Migration
             $table->date('fecha_nacimiento');
             $table->string('estad_civil',2);
             $table->string('sexo',2);
-            $table->string('email',30);
+            $table->string('email',30)->unique();
             $table->string('telefono',10);
             $table->string('password');
             $table->date('fecha_registro');

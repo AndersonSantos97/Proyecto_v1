@@ -101,25 +101,23 @@
                           <option value="N/A">No se</option>
                         </select>
                     </div>
-
-                      <!--email-->
+                    <!--email-->
                     <div class="input-field col s12">
-                        <input name="txtemail" id="email" type="email" class="validate" required>
-                        <label for="email">Correo Electrónico</label>
-                    </div>
+                      <input name="txtemail" id="email" type="email" class="validate" required>
+                      <label for="email">Correo Electrónico</label>
+                  </div>
 
-                    <!--contraseña-->
-                    <div class="input-field col s12">
-                        <input name="txtpassword" id="password" type="password" class="validate" required>
-                        <label for="password">Contraseña</label>
-                    </div>
+                  <!--contraseña-->
+                  <div class="input-field col s12">
+                      <input name="txtpassword" id="password" type="password" class="validate" required>
+                      <label for="password">Contraseña</label>
+                  </div>
 
-                    <!--confirmar contra-->
-                    <div class="input-field col s12">
-                        <input name="txtconfirmpass" id="confirmPassword" type="password" class="validate" required>
-                        <label for="confirmPassword">Confirmación de Contraseña</label>
-                    </div>
-
+                  <!--confirmar contra-->
+                  <div class="input-field col s12">
+                      <input name="txtconfirmpass" id="confirmPassword" type="password" class="validate" required>
+                      <label for="confirmPassword">Confirmación de Contraseña</label>
+                  </div>
                     <!--contacto-->
                     <div class="input-field col s12">
                         <input name="txtcontact" id="contactoEmergencia" type="text" class="validate" required>
@@ -161,6 +159,7 @@
                     <br><br>
                     
                   </form>
+
                 </div>
               </div>
             </div>

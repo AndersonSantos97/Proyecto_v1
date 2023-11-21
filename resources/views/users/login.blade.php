@@ -18,16 +18,40 @@
               <div class="card-content">
                 <span class="card-title">Inicio de Sesión</span>
                 <div class="row">
-                  <form class="col s12" >
+                  <form action="{{ route('users.login')}}" method="POST" class="col s12" >
+                    @csrf
                     <div class="row">
                       <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
+                        <input name="email" id="email" type="email" class="validate">
                         <label for="email">Correo Electrónico</label>
                       </div>
                       <div class="input-field col s12 m12">
-                        <input id="password" type="password" class="validate">
+                        <input name="password" id="password" type="password" class="validate">
                         <label for="password">Contraseña</label>
                       </div>
+                    </div>
+                    <div>
+                      <div>
+                        <p>Tipo de usuario</p>
+                      </div>
+                      <p>
+                        <label>
+                          <input class="with-gap mb-2" name="rol" type="radio" value="m"/>
+                          <span>Medico</span>
+                        </label>
+                        <label>
+                          <input class="with-gap mb-2" name="rol" type="radio"  value="p"/>
+                          <span>Paciente</span>
+                        </label>
+                        <label>
+                          <input class="with-gap mb-2" name="rol" type="radio"  value="e"/>
+                          <span>Entidad</span>
+                        </label>
+                      </p>
+                      {{-- <input type="radio" name="rol" id="rol_medico" value="m"/>
+                      <label for="rol_medico">Medico</label>
+                      <input type="radio" name="rol" id="rol_paciente" value="p"/>
+                      <label for="rol_paciente">Paciente</label> --}}
                     </div>
                     <button class="btn waves-effect waves-light" type="submit" name="action">Iniciar Sesión
                       <i class="material-icons right">send</i>
