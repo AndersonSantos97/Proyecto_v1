@@ -14,7 +14,7 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <ul class="right hide-on-med-and-down">
         <li><a  href="Ayuda.blade.php">Inicio</a></li>
-        <li><a  href="{{  ('ayuda')}}">Ayuda</a></li>
+        <li><a  href="#">Ayuda</a></li>
         <li><a  href="Acercade.html">Conocenos</a></li>
         <li><a  href="{{ route('users.login') }}">Ingresar</a></li>
         <li><a  href="{{ route('users.signup') }}">Registrarse</a></li>

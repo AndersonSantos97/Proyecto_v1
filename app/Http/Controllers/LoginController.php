@@ -33,9 +33,11 @@ class LoginController extends Controller
 
     public function authenticated(Request $request, $user){
         if($request->rol == 'm'){
-            return view('welcome');//redirigir a vista del medico
-        }else{
+            return redirect()->route('home');//redirigir a vista del medico
+        }elseif($request->rol == 'p'){
             return redirect()->route('home');//redirigir a vista de paciente
+        }else{
+            return redirect()->route('home');//redirigir a la vista de la entidad
         }
         
     }
