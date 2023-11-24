@@ -16,6 +16,9 @@ class PatientController extends Controller
         //echo "vista de paciente";
     }
     
+    public function patientMenu(){
+        return view("MenuPaciente");
+    }
     public function store(Request $request){
         //funcion creada para guardar los datos del cliente que
         //provienen de la pantalla de signup

@@ -18,6 +18,7 @@
               <div class="card-content">
                 <span class="card-title">Inicio de Sesión</span>
                 <div class="row">
+                  
                   <form action="{{ route('users.login')}}" method="POST" class="col s12" >
                     @csrf
                     <div class="row">
@@ -57,6 +58,7 @@
                       <i class="material-icons right">send</i>
                     </button>
                   </form>
+
                 </div>
               </div>
             </div>

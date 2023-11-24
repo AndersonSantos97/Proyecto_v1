@@ -245,5 +245,29 @@
 	</div>
 </div>
  
+<footer class="page-footer">
+  <div class="container">
+   
+    <div class="row">
+      
+      <div class="col s6 offset-s4">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"> <i class="fa fa-facebook" style="font-size: 35px; color:white;"></i></a> &nbsp;  &nbsp;
+        <a href="https://twitter.com/intent/tweet?source=&text=:%20" title="Tweet" target="_blank"> <i class="fa fa-twitter" style="font-size: 35px; color:white;"></i></a> &nbsp;  &nbsp;
+        <a href="https://plus.google.com/share?url=" title="Share on Google+" target="_blank"> <i class="fa fa-google-plus" style="font-size: 35px; color:white;"></i></a> &nbsp;  &nbsp;
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" title="Share on LinkedIn" target="_blank"> 
+          <i class="fa fa-linkedin" style="font-size: 35px; color:white;"> 
+          
+          
+        </i></a>
+      </div>
+        
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2023 Proyecto Desarrollo Web
+    <a class="grey-text text-lighten-4 right" href="https://www.usap.edu/">USAP</a>
+    </div>
+  </div>
+</footer>
       
 @endsection

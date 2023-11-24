@@ -35,7 +35,7 @@ class LoginController extends Controller
         if($request->rol == 'm'){
             return redirect()->route('home');//redirigir a vista del medico
         }elseif($request->rol == 'p'){
-            return redirect()->route('home');//redirigir a vista de paciente
+            return redirect()->route('patient.menu');//redirigir a vista de paciente
         }else{
             return redirect()->route('home');//redirigir a la vista de la entidad
         }
